@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/code
     docker:
-      - image: circleci/android:api-28
+      - image: circleci/android:api-27
     environment:
       JVM_OPTS: -Xmx3200m
     steps:
@@ -14,8 +14,8 @@ jobs:
 #         name: Chmod permissions #if permission for Gradlew Dependencies fail, use this.
 #         command: sudo chmod +x ./gradlew
       - run:
-          name: Android license
-          command: cat ./license >> $ANDROID_HOME/licenses/android-sdk-license
+          name: Move Android license
+          command: cat ./android-sdk-license > $ANDROID_HOME/licenses/android-sdk-license
       - run:
           name: Download Dependencies
           command: ./gradlew androidDependencies
