@@ -13,9 +13,9 @@ jobs:
 #      - run:
 #         name: Chmod permissions #if permission for Gradlew Dependencies fail, use this.
 #         command: sudo chmod +x ./gradlew
-      - run:
-          name: Move Android license
-          command: cat ./android-sdk-license > $ANDROID_HOME/licenses/android-sdk-license
+#      - run:
+#          name: Move Android license
+#          command: cat ./android-sdk-license > $ANDROID_HOME/licenses/android-sdk-license
       - run:
           name: Download Dependencies
           command: ./gradlew androidDependencies
