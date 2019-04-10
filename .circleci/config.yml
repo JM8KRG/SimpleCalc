@@ -15,7 +15,7 @@ jobs:
 #         command: sudo chmod +x ./gradlew
       - run:
           name: Android license
-          command: mkdir $ANDROID_HOME/licenses && cat ./license >> $ANDROID_HOME/licenses/android-sdk-license
+          command: cat ./license >> $ANDROID_HOME/licenses/android-sdk-license
       - run:
           name: Download Dependencies
           command: ./gradlew androidDependencies
